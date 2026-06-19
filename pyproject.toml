@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finnic-runosong"
+version = "0.1.0"
+description = "Finnic Runosong Template Explorer — tools for discovering and analysing recurring verse-group sequences in the Finnish and Estonian oral poetry corpus"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "adbc-driver-flightsql",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "python-dotenv",
+    "scikit-learn",
+    "scipy",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["finnic_runosong"]
